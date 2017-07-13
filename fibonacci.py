@@ -3,10 +3,15 @@ def fib(n):
         return 1
     return fib(n-1) + fib(n-2)
 
-assert fib(0)==1
-assert fib(1)==1
-assert fib(2)==2
-assert fib(3)==3
-assert fib(4)==5
-assert fib(5)==8
-assert fib(25)==121393
+fib_dict = {
+    0: 1,
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 5,
+    5: 8,
+    25: 121393
+}
+
+for i in range(6):
+    assert fib(i)==fib_dict[i]
